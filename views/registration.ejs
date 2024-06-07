@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product4</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/p1.css">
+    <link rel="stylesheet" href="/styles/media2.css">
+    <link rel="stylesheet" href="/styles/registration.css">
+</head>
+<body>
+    <%- include("navbar.ejs")%>
+    <main>
+        <form action="/registration" method="post">
+            <h1>Registration Form</h1>
+            <img src="styles/login-page-photo/men_logo.png" alt="">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="ConfirmPassword" placeholder="Confirm Password" required>
+            <button>CREATE ACCOUNT</button>
+            <h4>Already have an account?<a href="/l"> Sign in</a></h4>
+        </form>
+    </main>
+    <%- include("footer.ejs")%>
+    <script src="scrpit.js"></script>
+</body>
+</html>

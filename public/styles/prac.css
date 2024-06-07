@@ -1,0 +1,189 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+.logo{
+    width: 70px;
+    height:70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    border-radius: 10%;
+    width: 90%;
+    height: 90%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color:cadetblue;
+}
+ul{
+    display: flex;
+}
+li{
+    margin: 20px;
+}
+a{
+    font-size: larger;
+    font-weight: 500;
+    color: black;
+}
+a img{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.hero{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 90vh;
+}
+.box1{
+    width: 50%;
+    height: 100%;
+}
+.box2{
+    width: 50%;
+    height: 100%;
+}
+.box1 img{
+    width: 100%;
+    height: 100%;
+}
+.box2 img{
+    width: 100%;
+    height: 100%;
+}
+.products h1{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 50px;
+}
+.products p{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 17.1px;
+}
+.collection{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 120vh;
+}
+.c{
+    width: 20%;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 42%;
+    cursor: pointer;
+    margin-left: 4%;
+    margin-top: 30px;
+}
+.c:hover{
+     box-shadow: 20px 20px 30px rgba(0,0,0,0.5);;
+}
+.cloths{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 60%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+p.brand{
+    text-align: left;
+    margin-left: 15px;
+    color: grey;
+}
+.naming{
+    margin-top:6px;
+    margin-left: 15px;
+}
+.star{
+    margin-left: 12px;
+    margin-top:10px;
+}
+.star img{
+    width:20px;
+}
+.price{
+    color: green;
+    margin-left: 15px;
+    font-size:20px;
+    margin-top: 7px;
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.add{
+    width: 40px;
+    height: 40px;
+}
+.last{
+    margin-bottom: 10px;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.lastbox1{
+    background-image: url('photo/f3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 46%;
+    margin-left: 2.5%;
+}  
+.lastbox1:hover button{
+    background-color: cornflowerblue;
+    border: none;
+} 
+.lastbox2{
+    background-image: url('photo/f4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 2.5%;
+    width: 46%;
+}
+.lastbox2:hover button{
+    background-color: cornflowerblue;
+    border: none;
+} 
+.lbox{
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.lbox h4{
+    font-size: 20px;
+    color:rgb(26, 66, 83);
+}
+.box h2{
+    font-size: 30px;
+    color:white;
+    margin-top: 5px;
+    margin-bottom: 7px;
+}
+button{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-weight: 800;
+    padding: 10px 20px;
+    margin-left: 60px;
+    margin-top: 10px;
+    cursor: pointer;
+}

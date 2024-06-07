@@ -1,0 +1,127 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+main{
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
+}
+table{ 
+    /* width: 80%; */
+    border-collapse: collapse;
+}
+th{
+    padding: 25px 2vw;
+}
+
+.remove{
+    width: 30px;
+    height: 30px;
+}
+.shirtimg{
+    width: 70px;
+    height: 70px;
+}
+td{
+    text-align: center;
+}
+td:nth-child(1){
+    width: 50px;
+}
+td:nth-child(2){
+    width: 80px;
+    padding-top: 15px;
+}
+td:nth-child(3){
+    padding-left: 10px;
+    padding-right:10px ;
+}
+td:nth-child(5){
+    width: 80px;
+}
+.inp{
+    width: 80px;
+    height: 25px;
+}
+thead{
+    border: 1px solid grey;
+    border-left: none;
+    border-right: none;
+    /* background-color: rgb(193, 193, 184); */
+}
+.final-amount{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.cpn{
+    width: 40%;
+    margin-bottom: 30px;
+    min-width: 250px;
+}
+.cpn h3{
+    padding-bottom: 15px;
+    font-size: 25px;
+}
+.cpn input{
+    padding: 10px 20px;
+    width: 60%;
+    min-width: 250px;
+    margin-right: 10px;
+    border: 1px solid black;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.cpn button{
+    padding: 10px 20px;
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+    background-color: #088178;
+    border-radius: 5px;
+}
+.total-amount{
+    width: 40%;
+    margin-bottom: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    min-width: 250px;
+}
+.total-amount h3{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    text-align: center;
+}
+.total-amount table{
+    border-collapse: collapse;
+    width:90%;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.total-amount table  td{
+    border: 1px solid gray;
+    font-size: 17px;
+    padding: 5px 15px;
+}
+.total-amount button{
+    padding: 10px 20px;
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+    background-color: #088178;
+    border-radius: 5px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+@media screen and (max-width:550px){
+    main{
+        justify-content: left;
+    }
+}

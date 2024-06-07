@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #193549;
+}
+#all_pet_container{
+    width: 100%;
+    min-height: 90vh;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+}
+#filter{
+    width: 22%;
+    height: 70vh;
+    /* background-color: paleturquoise; */
+    border: 1px solid black;
+    background-color: #9abee0;
+}
+#filter h2{
+    padding-top: 50px;
+    text-align: center;
+}
+
+.f{
+    width: 300px;
+    height: 40px;
+    font-size: 25px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    padding: 5px;
+    padding-left: 15px;
+}
+
+#filter form button{
+    margin-left: 45px;
+    width: 220px;
+    font-size: 25px;
+    padding: 5px;
+    background-color: cadetblue;
+    color: white;
+    cursor: pointer;
+}
+
+#clear{
+   display: block;
+   margin-top: 50px;
+   margin-left: 200px;
+   color: blue;
+}
+.box{
+    background-color: white;
+    border-radius: 25px;
+    border: 2px solid black;
+    width: 28%;
+    min-width: 250px;
+    padding: 10px 12px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.1);
+    margin: 15px;
+    transition: 0.2s ease;
+    /* background-color: rgb(135, 78, 78); */
+    height: 420px;
+}
+.box p{
+    /* color: #606063; */
+    color: dimgray;
+}
+#ach{
+   border: none;
+   background-color: transparent;
+   width: 100%;
+   height: 100%;
+}
+.box:hover{
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.2);
+}
+.PET_IMAGE{
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+    padding-right:10px;
+}
+.show_pet{
+    margin-left: 2%;
+    width: 74%;
+    margin-left: 2%;
+}
+.show_pet h2{
+    margin-top : 20px;
+    margin-left: 28%;
+    color:white;
+    text-shadow: 2px 2px 4px red;
+}
+.for_chat{
+    display: flex;
+    flex-direction: row;
+}
+.for_chat button{
+    margin-left: 80px;
+    width:85px;
+    height: 40px;
+    font-size: 25px;
+    font-weight: 700;
+    background-color:cornflowerblue;
+    color: white;
+}

@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#heading{
+  margin-top: 6vh;
+  color:#122738 ;
+  font-size: 40px;
+  text-align: center;
+}
+body{
+    background-image: url("/styles/photo/chat2_bcg.png");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.chatbox{
+    background-image: url("/styles/photo/Main_Chat.jpeg");
+    margin-left: 35%;
+    width: 30%;
+    height: 80vh;
+    border: 5px solid #fcfcfc;
+    border-radius: 12px;
+    /* background-color: white; */
+}
+input{
+    width: 480px;
+    margin-left: 20px;
+    height: 35px;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 15px;
+}
+.box0{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+}
+.box0 img{
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+h2{
+    margin-top: 7px;
+    font-size: 30px;
+    margin-left: 10px;
+    color: white;
+}
+.box1{
+    width: 96%;
+    margin-left: 2%;
+    height: 61vh;
+    margin-top: 10px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    margin-bottom: 5px;
+}
+form{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+}
+img{
+    width: 60px;
+    height: 60px;
+}
+button{
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+}
+.box1 p{
+    font-size: 20px;   
+}
+p{
+    padding:5px 12px;
+    margin-top: 3px;
+    border-radius: 5px;
+    background-color: aquamarine;
+}
+.a{
+    color: blueviolet;
+    text-align: right;
+}
+.b{
+    color: red;
+}
+.left{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+}
+.right{
+    width: 60%;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 40%;
+}

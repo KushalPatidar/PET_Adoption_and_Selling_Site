@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People</title>
+    <link rel="stylesheet" href="/styles/chat_container.css">
+</head>
+<body>
+    <div class="chat_container">
+        <h1>Chats</h1>
+        <div class="boxes">
+            <%for(let i=0;i<arr.length;i++){%>
+                <div class="box">
+                    <img src="/styles/photo/profile.png" alt="">
+                    <p>
+                        <a href="/chat/<%=arr[i].from%>"><%=arr[i].from%></a>
+                    </p>
+                </div>
+            <%}%>
+        </div>
+    </div>
+</body>
+</html>

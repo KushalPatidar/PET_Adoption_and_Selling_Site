@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/media.css">
+    <link rel="stylesheet" href="/styles/seller.css">
+</head>
+<body>
+    <header> 
+        <nav>
+           <div class="logo">
+              <img src="styles/photo/logo.jpg" alt="">
+           </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <%if(flag===1){%>
+                    <li><a href="/logout">Logout</a></li>
+                <%}else{%>
+                   <li><a href="/l">Login</a></li>
+                <%}%>
+                <li><a href="/chat_">Chat</a></li>
+                <li><a href="#">Contact</a></li>
+                <a href="/cart"><img src="styles/photo/cart.png" id="icon" alt=""></a>
+            </ul>
+        </nav>
+    </header>
+    <form action="/sell_pet" method="post" enctype="multipart/form-data" id="sell_form">
+        <h1>Sell your Pet</h1>
+        <select id="dropdown" name="selectedOption" class="f">
+            <option value="Dog">Dog</option>
+            <option value="Cat">Cat</option>
+        </select>
+        <input type="text" placeholder="Breed" name="breed" required>
+        <input type="text" placeholder="Name" name="name" required>
+        <input type="text" placeholder="Gender" name="gender" required>
+        <input type="text" placeholder="State" name="state" required>
+        <input type="text" placeholder="City" name="city" required>
+        <input type="text" placeholder="Mobile No with country code" name="mobile_no" required>
+        <textarea placeholder="About Pet" name="about" id="" cols="30" rows="10" ></textarea>
+        <input type="file" id="img" name="img" accept="image/*"
+        style="width: 700px; height: 100px;" required>
+        <button name="submit">Upload</button>
+    </form>
+    <%if(arr.length!==0){%>
+    <div class="pet_for_sell">
+        <h1>Pet For Sell</h1>
+        <div class="boxes">
+            <%for(let i=0;i<arr.length;i++){
+               let base64Data = arr[i].data.toString('base64');
+                let s = "/product/"+arr[i].id;
+            %>
+            <div class="box">
+                <a href = <%=s%> id="ach">
+                    <img src="data:image/jpeg;base64,<%= base64Data %>" class='PET_IMAGE' alt=""> 
+                </a>
+                <p>Name : <%=arr[i].name%></p>
+                <p>Breed : <%=arr[i].breed%></p>
+                <p>Mobile No : <%=arr[i].mobile_no%></p>
+                <p>State : <%=arr[i].state%></p>
+                <div class="for_chat">
+                    <div class="gender_and_city">
+                        <p>City : <%=arr[i].city%></p>
+                        <p>Gender : <%=arr[i].gender%></p>
+                    </div>
+                    <form action="/delete" method="post">
+                        <input type="hidden" value= <%=arr[i].id%> name="id1" >
+                        <button>Delete</button>     
+                    </form>
+                </div>
+            </div>
+            <%}%>
+        </div>
+    </div>
+    <%}%>
+    <%- include("footer.ejs")%>
+    <script src="styles/script2.js"></script>
+</body>
+</html>

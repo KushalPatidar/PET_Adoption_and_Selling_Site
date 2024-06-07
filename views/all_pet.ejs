@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find your pet</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/media.css">
+    <link rel="stylesheet" href="/styles/all_pet.css">
+</head>
+<body>
+    <header> 
+        <nav>
+           <div class="logo">
+              <img src="styles/photo/logo.jpg" alt="">
+           </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <%if(flag===1){%>
+                    <li><a href="/logout">Logout</a></li>
+                <%}else{%>
+                   <li><a href="/l">Login</a></li>
+                <%}%>
+                <li><a href="/chat_">Chat</a></li>
+                <li><a href="#">Contact</a></li>
+                <a href="/cart"><img src="styles/photo/cart.png" id="icon" alt=""></a>
+            </ul>
+        </nav>
+    </header>
+    <div id="all_pet_container">
+        <div id="filter">
+            <h2>Filter</h2>
+            <form action="filter" method="post">
+                <select id="dropdown" class="f" name="selectedOption">
+                    <option value="Dog">Dog</option>
+                    <option value="Cat">Cat</option>
+                </select>
+                <input type="text" placeholder="Breed" class="f" name="breed">
+                <input type="text" placeholder="State" class="f" name="state">
+                <input type="text" placeholder="City" class="f" name="city">
+                <button>Apply Filter</button>
+                <a href="/all_pet" id="clear">clear filter</a>
+            </form>
+        </div>
+        <div class="show_pet">
+            <h2>Pet Available for Adoption</h2>
+            <div class="boxes">
+                <%for(let i=0;i<arr.length;i++){
+                   let base64Data = arr[i].data.toString('base64');
+                    let s = "/product/"+(arr[i].id).toString();
+                %>
+                <div class="box">
+                    <a href = <%=s%> id="ach">
+                        <img src="data:image/jpeg;base64,<%= base64Data %>" class='PET_IMAGE' alt=""> 
+                    </a>
+                    <p>Name : <%=arr[i].name%></p>
+                    <p>Breed : <%=arr[i].breed%></p>
+                    <p>Mobile No : <%=arr[i].mobile_no%></p>
+                    <p>State : <%=arr[i].state%></p>
+                    <div class="for_chat">
+                        <div class="gender_and_city">
+                            <p>City : <%=arr[i].city%></p>
+                            <p>Gender : <%=arr[i].gender%></p>
+                        </div>
+                        <button><a href="/chat/<%=arr[i].email%>">Chat</a></button>    
+                    </div>
+                </div>
+                <%}%>
+            </div>
+        </div>
+    </div>
+    <%- include("footer.ejs")%>
+    <script src="styles/script2.js"></script>
+</body>
+</html>

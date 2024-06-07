@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+main{
+    width: 100%;
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    
+    background-image: url('login-page-photo/login-page-2.jpg');
+}
+form{
+    /* background-image: url("login-page-photo/glass2.avif"); */
+   background-color:cornflowerblue;
+   width: 25%;
+   min-width: 350px;
+   height: 70%;
+   border-radius: 15px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+}
+.footer{
+    margin-top: 0px;
+}
+form img{
+   width: 80px;
+   height: 80px;
+   margin-top: 30px;
+   margin-bottom: 20px;
+   border-radius: 50px;
+}
+
+.email{
+    width: 70%;
+}
+.password{
+    width: 70%;
+}
+#login_type{
+    width: 70%;
+}
+form select{
+    width: 100%;
+    height: 30px;
+    padding-left: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 2px solid slategray;
+    font-size: 16px;   
+}
+form input{
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 2px solid slategray;
+    font-size: 16px;
+}
+form button{
+    width: 130px;
+    font-size: 15px;
+    color: #fff;
+    background-color: rebeccapurple;
+    padding: 10px 15px;
+    font-weight: 800;
+    cursor: pointer;
+    border: 1px solid white;
+    margin-top: 20px;
+}
+h4{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 17px;
+    /* font-weight: 100; */
+}
+form a{
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 17px;
+    color: blue;
+}
+@media screen and (max-width:400px){
+    form{
+    background-color:cornflowerblue;
+       width: 90%;
+       min-width: 0px;
+    }
+    form button{
+        width: 40%;
+    }
+}

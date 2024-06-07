@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product1</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/cart.css">
+    <link rel="stylesheet" href="/styles/media.css">
+    <link rel="stylesheet" href="/styles/cart2.css">
+</head>
+<body>
+    <header> 
+        <nav>
+           <div class="logo">
+              <img src="styles/photo/Screenshot (257).png" alt="">
+           </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/logout">Logout</a></li>
+                <li><a href="/Wishlist">Wishlist</a></li>
+                <li><a href="#">Contact</a></li>
+                <a href="/cart"><img src="styles/photo/cart.png" id="icon" alt=""></a>
+            </ul>
+        </nav>
+    </header>
+    <%let total = 0;%>
+    <h1 id="heading">My Cart</h1>
+    <div class="Main_Cart">
+        <%for(let i=0;i<brr.length;i++){
+            total+=(arr[brr[i]].price)*(qty[i]); 
+        %>
+            <div class="Sub_Product">
+                <a href="/product/<%=arr[brr[i]].id%>">
+                    <div class="lefty">
+                        <img src="/styles/photo/<%=arr[brr[i]].id%>.webp" alt="">
+                    </div>
+                    <div class="Righty">
+                        <h3 class="t1"><%=arr[brr[i]].name%></h3>
+                        <h3 class="t2"><%=arr[brr[i]].tag%></h3>
+                        <div class="starimg">
+                            <img src="/styles/photo/fullstar.png" alt="">
+                            <img src="/styles/photo/fullstar.png" alt="">
+                            <img src="/styles/photo/fullstar.png" alt="">
+                            <img src="/styles/photo/fullstar.png" alt="">
+                            <img src="/styles/photo/half star.png" alt="">
+                        </div>
+                        <h4 class="t3">Special price <%=arr[brr[i]].discount_in_Percentage%>% Off</h4>
+                        <h2 class="t4">$<%=arr[brr[i]].price%></h2>
+                        <form action="remove_from_cart" method="post">
+                            <button class="rmv_btn" name="rmv_btn" value= <%=arr[brr[i]].id%>>Remove</button>
+                        </form>
+                        <button class="buy_btn">Buy Now</button>
+                    </div>
+                </a>
+            </div>
+        <%}%>
+    </div>
+
+    <div class="final-amount">
+        <div class="cpn">
+            <h3>Apply Coupon</h3>
+            <div>
+                <input type="text" placeholder="Enter Your Coupon">
+                <button>Apply</button>
+            </div>
+
+        </div>
+        <div class="total-amount">
+            <h3>Cart Totals</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Cart Subtotal</td>
+                        <td>$<%=total%></td>
+                    </tr>
+                    <tr>
+                        <td>Shipping</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td><b>Total</b> </td>
+                        <td> <b>$<%=total%></b></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button>Proceed To Checkout</button>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-b1">
+            <h3 class="Conn">Contact</h3>
+            <p><b>Address:</b> 562 Wellington Road,Street 32,San Francisco</p>
+            <p><b>Phone:</b> +01 3333 365/(+91) 01 2345 6789</p>
+            <h3>Follow Us</h3>
+            <div class="follow">
+                <a href="#"><img src="styles/photo/facbook icon.png" alt=""></a>
+                <a href="#"><img src="styles/photo/insta.png" alt=""></a>
+                <a href="#"><img src="styles/photo/twitter.png" alt=""></a>
+                <a href="#"><img src="styles/photo/linkdin.png" alt=""></a>
+            </div>
+        </div>
+
+            <div class="footer-b2">
+                <h3>About</h3>
+                <p><a href="#">About Us</a></p>
+                <p><a href="#">Delivery Information</a></p>
+                <p><a href="#">Privacy Policy</a></p>
+                <p><a href="#">Terms and Conditions</a></p>
+                <p><a href="#">Contact Us</a></p>
+            </div>
+            <div class="footer-b3">
+                <h3>My account</h3>
+                <p><a href="#">Sign In</a></p>
+                <p><a href="#">View Cart</a></p>
+                <p><a href="#">My Wishlist</a></p>
+                <p><a href="#">Track My Order</a></p>
+                <p><a href="#">Help</a></p>
+            </div>
+        <div class="footer-b4">
+            <h3>Install App</h3>
+            <p>From App Store or Google Play Store</p>
+            <img src="styles/photo/app_store.jpg" class="store" alt="">
+            <img src="styles/photo/play_storee.jpg" class="store" alt="">
+            <p>Secured Payment Gateways</p>
+            <div class="payment">
+                <img src="styles/photo/visaa.jpg" alt="">
+                <img src="styles/photo/mastercard.png" alt="">
+                <img src="styles/photo/net banking.png" alt="">
+                <img src="styles/photo/codd.jpg" id="cod" alt="">
+                <img src="styles/photo/emi.png" alt="">
+            </div>
+           
+        </div>
+    </div>
+</body>
+</html>

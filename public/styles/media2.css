@@ -1,0 +1,26 @@
+@media screen and (max-width:980px){
+    #pdetail{
+        font-size: 17px;
+    }
+}
+@media screen and (max-width:866px){
+    #pdetail{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:834px){
+    .left{
+        margin-left: 7vw;
+        width: 60%;
+        height: 100vh;
+        margin-top: 15px;
+    }
+    .right{
+        margin-top: 0px;
+    }
+}
+@media screen and (max-width:672px){
+    .right{
+       height: auto;
+    }
+}

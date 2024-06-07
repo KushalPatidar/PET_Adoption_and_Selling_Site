@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="/styles/wishlist.css">
+</head>
+<body>
+    <header> 
+        <nav>
+           <div class="logo">
+              <img src="styles/photo/Screenshot (257).png" alt="">
+           </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/logout">Logout</a></li>
+                <li><a href="#">Contact</a></li>
+                <a href="/cart"><img src="styles/photo/cart.png" id="icon" alt=""></a>
+            </ul>
+        </nav>
+    </header>
+    <div class="wishbox">
+        <h1>My Wishlist</h1>
+    </div>
+    <div class="boxes wishcontainer">
+        <%for(let i=0;i<brr.length;i++){
+            let index = brr[i];
+            let url = "styles/photo/"+arr[index].id+".webp";
+            let s = "/product/"+arr[index].id;
+        %>
+        <div class="box">
+            <a href = <%=s%> id="ach">
+                <img src = <%= url %> class='cloth' alt=""> 
+                <div class="des">
+                    <div class="brand"><%=arr[index].brand%></div>
+                    <h5><%=arr[index].name%></h5>
+                    <div class="star">
+                        <img src="styles/photo/fullstar.png" alt="">
+                        <img src="styles/photo/fullstar.png" alt="">
+                        <img src="styles/photo/fullstar.png" alt="">
+                        <img src="styles/photo/fullstar.png" alt="">
+                        <img src="styles/photo/half star.png" alt="">
+                    </div>
+                    <div class="last">
+                        <div class="one">
+                            <h4>$<%=arr[index].price%></h4>
+                        </div>
+                        <div class="two">
+                            <form action="/remove_from_wishlist" method="post">
+                                <button class="delete" name="name" value= <%=arr[index].id%>>
+                                    <img src="styles/photo/delete.webp" alt="">
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <%}%>
+    </div>
+    <%- include("footer.ejs")%>
+</body>
+</html>

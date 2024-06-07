@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption Website</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/media.css">
+</head>
+<body>
+    <header> 
+        <nav>
+           <div class="logo">
+              <img src="styles/photo/logo.jpg" alt="">
+           </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <%if(flag===1){%>
+                    <li><a href="/logout">Logout</a></li>
+                <%}else{%>
+                   <li><a href="/l">Login</a></li>
+                <%}%>
+                <li><a href="/chat_">Chat</a></li>
+                <li><a href="#">Contact</a></li>
+                <a href="/cart"><img src="styles/photo/cart.png" id="icon" alt=""></a>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero">
+        <div class="box1">
+           <h2>Find your <b>Forever Friend</b> and bring joy into your home & Unlock a world of <b>Love</b> and <b>Companionship</b></h2>
+           <button><a href="/all_pet">Adopt a Pet</a></button>
+        </div>
+        <div class="box2">
+            <img src="styles/photo/dog1.png" alt="">
+        </div>
+    </div>
+    <h2 id="journey">Your Pet Adoption Journey</h2>
+    <div class="help">
+        <div class="box3">
+            <img src="styles/photo/dog2.png" alt="">
+        </div>
+        <div class="box4">
+            <div class="box4a">
+                <img src="styles/photo/search.png" alt="">
+                <div class="box4a1">
+                    <h3>Search Pet</h3>
+                    <p>Adopt a dog or cat who's right for you. Simply enter your</p><p>city above to start your search.</p>
+                </div>
+            </div>
+            <div class="box4a b4">
+                <img src="styles/photo/chat.png" alt="">
+                <div class="box4a1">
+                    <h3>Connect</h3>
+                    <p>Once you find a pet, chat with pet parent to get more</p><p>information of pet. Contact them to learn more about
+                    </p><p> how to meet and adopt the pet.</p>
+                </div>
+            </div>
+            <div class="box4a b4">
+                <img src="styles/photo/cart.png" alt="">
+                <div class="box4a1">
+                    <h3>Adopt</h3>
+                    <p>The rescue or pet parents will walk you through their <p>adoption process. Prepare your home for the arrival of </p></p><p>your fur baby to help them adjust to their new family.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="ban">
+        <div class="boxx">
+            <img src="styles/photo/cat1.png" alt="">
+        </div>
+        <div class="boxy">
+            <h2>#Adopt<b>Love❤</b></h2>
+            <p>Approximately 1478 dogs & cats die every day on road in India. This site is on a mission to provide every dog and cat a home before 2035. It’s just one of the many ways this site gives back and helps you become a part of something larger. Join this Community and help setting up Pet houses in your surrounding for strays.</p>
+            <button id="sell_pet_btn"><a href="/seller">Sell Pet</a></button>
+        </div>
+    </section>
+    <%- include("footer.ejs")%>
+    <script src="styles/script2.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.wishbox{
+    padding-top: 10vh;
+    height: 10vh;
+    padding-bottom: 7vh;
+}
+.wishbox h1{
+    text-align: center;
+    font-family:cursive;
+    color:cornflowerblue
+}
+.delete{
+    width: 70px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+}
+.delete img{
+    width: 100%;
+    height: 100%;
+}
+
+.wishcontainer{
+    min-height: 52vh;
+}

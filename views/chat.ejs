@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="/styles/chat.css">
+</head>
+<body>
+    <h1 id="heading">Chat Room</h1>
+    <div class="chatbox">
+        <div class="box0">
+            <img src="/styles/photo/profile3.png" alt="">
+            <h2><%=name%></h2>
+        </div>
+        <hr>
+        <div class="box1">
+            <%for(let i=0;i<arr.length;i++){%>
+                <%if(arr[i]["a"]===1){%>
+                    <div class="right">
+                        <p class="a">
+                            <%=arr[i].text%>
+                        </p>
+                    </div>
+                <%}else{%>
+                    <div class="left">
+                        <p class="b"><%=arr[i].text%></p>
+                    </div>
+                <%}%>
+            <%}%>
+        </div>
+        <form action="/chat" method="post">
+            <input type="hidden" name="pet_owner_mail" value="<%= pet_owner_mail %>">
+            <input type="text" name="msg" placeholder="Message...">
+            <button> <img src="/styles/photo/send.png" alt=""></button>
+        </form>
+    </div>
+    <script>
+        // Set the initial scroll position to the bottom
+        document.querySelector('.box1').scrollTop = document.querySelector('.box1').scrollHeight;
+    </script>
+</body>
+</html>

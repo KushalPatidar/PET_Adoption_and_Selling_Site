@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/media.css">
+    <link rel="stylesheet" href="/styles/login.css">
+</head>
+<body>
+    <header> 
+        <nav>
+           <div class="logo">
+            <img src="styles/photo/logo.jpg" alt="">
+           </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/r">Register</a></li>
+                <li><a href="/chat_">Chat</a></li>
+                <li><a href="#">Contact</a></li>
+                <a href="/cart"><img src="styles/photo/cart.png" id="icon" alt=""></a>
+            </ul>
+        </nav>
+    </header>
+     <main>
+        <form action="login" method="post">
+             <img src="styles/login-page-photo/men_logo.png" alt="">
+             <div id="login_type">
+                 <select name="login_type">
+                    <option value="Buyer">Buyer</option>
+                    <option value="Seller">Seller</option>
+                 </select>
+             </div>
+           <div class="email">
+             <input type="email" name="email" id="" placeholder="Email" required>
+           </div>
+           <div class="password">
+            <input type="password" name="password" id="" placeholder="Password" required>
+           </div>
+           <button>Login</button>
+           <h4>Does not have any account?<a href="/r">Sign up</a></h4>
+        </form>
+     </main>
+     <%- include("footer.ejs")%>
+</body>
+</html>
